@@ -1,0 +1,18 @@
+# Cloned third-party libraries. Recreated by ./setup.sh from libs.tsv.
+/coppersmith/*
+!/coppersmith/.gitkeep
+/lattice_tools/*
+!/lattice_tools/.gitkeep
+/crypto_attacks/*
+!/crypto_attacks/.gitkeep
+
+# Generated local environment.
+/env.sh
+/links/*
+!/links/.gitkeep
+
+# Local caches.
+__pycache__/
+*.py[cod]
+.venv/
+venv/

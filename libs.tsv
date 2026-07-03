@@ -1,0 +1,16 @@
+# name	path	url	branch	actions	description
+# branch "-" means the remote default branch.
+# actions are comma-separated:
+#   pythonpath                         add the clone directory to generated env.sh
+#   sage-pip-editable                  run: sage -python -m pip install -e <path>
+#   patch:no-msolve                    apply the Dockerfile's josephsurin Sage compatibility patch
+#   symlink:<link-name>:<target-path>  create links/<link-name> -> <path>/<target-path>
+kionactf-coppersmith	coppersmith/kionactf	https://github.com/kionactf/coppersmith.git	-	pythonpath	Main kionactf Coppersmith toolkit for Sage small roots.
+defund-coppersmith	coppersmith/defund	https://github.com/defund/coppersmith.git	-	symlink:defund_coppersmith.sage:coppersmith.sage	Classic defund coppersmith.sage reference implementation.
+cuso	coppersmith/cuso	https://github.com/keeganryan/cuso.git	-	sage-pip-editable	Automated multivariate Coppersmith solver importable as cuso.
+josephsurin-lbc	lattice_tools/lattice-based-cryptanalysis	https://github.com/josephsurin/lattice-based-cryptanalysis.git	-	pythonpath,patch:no-msolve	Lattice-based cryptanalysis toolkit and small-roots examples.
+ineq-cvp	lattice_tools/Inequality_Solving_with_CVP	https://github.com/rkm0959/Inequality_Solving_with_CVP.git	-	symlink:inequ_cvp_solve.sage:solver.sage	CVP-based inequality solver.
+pwn-stuff	lattice_tools/pwn-stuff	https://github.com/nneonneo/pwn-stuff.git	-	symlink:solvelinmod.py:math/solvelinmod.py	Misc CTF scripts, including modular linear solver.
+lll-cvp	lattice_tools/lll_cvp	https://github.com/maple3142/lll_cvp.git	-	symlink:lll_cvp.py:lll_cvp.py	LLL/CVP helper scripts.
+linineq	lattice_tools/linineq	https://github.com/TheBlupper/linineq.git	-	symlink:linineq.py:linineq.py	Linear inequalities helper.
+jvdsn-crypto-attacks	crypto_attacks/jvdsn	https://github.com/jvdsn/crypto-attacks.git	-	pythonpath	General crypto attacks library, including RSA and small-roots helpers.
